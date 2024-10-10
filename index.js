@@ -12,7 +12,8 @@ app.use(express.json())
 
 database.connect();
 
-app.use("/api/v1", router)
+// app.use("/api/v1", router)
+app.use("", router)
 
 app.get("/", logger,(req, res) => {
     return res.json({success: true, message: "Server is up and running"})
